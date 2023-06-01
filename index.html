@@ -14,9 +14,18 @@
             <h1>Calculadora de médias</h1>
         </div>
         <form action=""  id="entrada">
-                <input placeholder="Nome da atividade" required type="text" name="nota" id="">
-                <input placeholder="Nota" required type="number"  name="nota" id="" min="0" max="10">
-                <input id="botao" type="button" value="Adicionar +">
+                <div class="aviso">
+                    <input placeholder="Nome da atividade" required type="text" name="nota" id="">
+                    <p id="nomeerro">mensagem</p>
+                </div>
+                <div class="aviso">
+                    <input placeholder="Nota" required type="number"  name="nota" id="" min="0" max="10">
+                    <p id="notaerro">mensagem</p>
+                </div>
+                <div class="aviso">
+                    <input id="botao" type="button" value="Adicionar +">
+                    <p>mensagem</p>
+                </div>
         </form>
         <table id="tabela" cellspacing="0">
             <thead>
@@ -50,5 +59,6 @@
             </tfoot>
         </table>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

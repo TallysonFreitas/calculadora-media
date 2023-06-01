@@ -93,3 +93,17 @@ td img {
 .reprovado{
     background-color: red;
 }
+
+.aviso{
+    display: flex;
+    flex-direction: column;
+}
+
+.aviso p {
+    padding: 4px;
+    background-color: white;
+    text-align: center;
+    margin-top: 5px;
+    display: none;
+}
+
