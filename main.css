@@ -1,0 +1,95 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font: normal 1.2em sans-serif;
+}
+
+main{
+    display: block;
+    margin: auto;
+}
+
+div{
+    display: flex;
+}
+
+#entrada{
+    display: flex;
+    gap: 10px;
+    margin: 40px 0;
+}
+
+#entrada input{
+    padding: 5px;
+    font: bold normal 0.9em sans-serif;
+    color: black; 
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+#botao{
+    background-color: greenyellow;
+    border: none;
+    cursor: pointer;
+}
+
+#botao:hover{
+    background-color: rgb(130, 204, 19);
+}
+
+div img{
+    width: 48px;
+}
+
+#tabela{
+    font: normal 1.2em sans-serif;
+}
+
+table{
+    text-align: left;
+    width: 50vw
+}
+
+thead{
+    border-bottom: 2px solid black;
+}
+
+table th{
+    border-bottom: 2px solid black;
+    padding: 4px;
+    text-align: center;
+}
+
+table td{
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+td img {
+    width: 24px;
+}
+
+.resultado{
+    padding: 8px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.aprovado{
+    background-color: rgb(130, 204, 19);
+}
+
+.reprovado{
+    background-color: red;
+}

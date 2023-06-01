@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <main>
+        <div>
+            <img src="images/logo.png" alt="logo">
+            <h1>Calculadora de médias</h1>
+        </div>
+        <form action=""  id="entrada">
+                <input placeholder="Nome da atividade" required type="text" name="nota" id="">
+                <input placeholder="Nota" required type="number"  name="nota" id="" min="0" max="10">
+                <input id="botao" type="button" value="Adicionar +">
+        </form>
+        <table id="tabela" cellspacing="0">
+            <thead>
+                <th>Nome da atividade</th>
+                <th>Nota</th>
+                <th>Situacao</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Fisica</td>
+                    <td>9</td>
+                    <td><img src="images/aprovado.png" alt="emoji"></td>
+                </tr>
+                <tr>
+                    <td>Fisica</td>
+                    <td>9</td>
+                    <td><img src="images/aprovado.png" alt="emoji"></td>
+                </tr>
+                <tr>
+                    <td>Fisica</td>
+                    <td>9</td>
+                    <td><img src="images/aprovado.png" alt="emoji"></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Media Final</td>
+                    <td>9</td>
+                    <td><span class="resultado aprovado">Aprovado</span></td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+</body>
+</html>
