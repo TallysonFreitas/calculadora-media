@@ -16,6 +16,7 @@ body{
 main{
     display: block;
     margin: auto;
+    margin-top: 100px;
 }
 
 div{
@@ -84,6 +85,7 @@ td img {
     background-color: black;
     color: white;
     border-radius: 5px;
+    display: none;
 }
 
 .aprovado{
@@ -105,5 +107,6 @@ td img {
     text-align: center;
     margin-top: 5px;
     display: none;
+    border-radius: 5px;
 }
 

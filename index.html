@@ -17,14 +17,14 @@
         <form action=""  id="entrada">
                 <div class="aviso">
                     <input placeholder="Nome da atividade" required type="text" name="nota" id="atividade">
-                    <p id="nomeerro">mensagem</p>
+                    <p id="nomeErro">mensagem</p>
                 </div>
                 <div class="aviso">
-                    <input placeholder="Nota" required type="number"  name="nota" id="" min="0" max="10">
-                    <p id="notaerro">mensagem</p>
+                    <input placeholder="Nota" required type="number"  name="nota" id="nota" min="0" max="10">
+                    <p id="notaErro">mensagem</p>
                 </div>
                 <div class="aviso">
-                    <input id="botao" type="button" value="Adicionar +">
+                    <input id="botao" name="nota" type="button" value="Adicionar +" onclick="validar()">
                     <p>mensagem</p>
                 </div>
         </form>
@@ -34,28 +34,14 @@
                 <th>Nota</th>
                 <th>Situacao</th>
             </thead>
-            <tbody>
-                <tr>
-                    <td>Fisica</td>
-                    <td>9</td>
-                    <td><img src="images/aprovado.png" alt="emoji"></td>
-                </tr>
-                <tr>
-                    <td>Fisica</td>
-                    <td>9</td>
-                    <td><img src="images/aprovado.png" alt="emoji"></td>
-                </tr>
-                <tr>
-                    <td>Fisica</td>
-                    <td>9</td>
-                    <td><img src="images/aprovado.png" alt="emoji"></td>
-                </tr>
+            <tbody id="tabelado">
+                
             </tbody>
             <tfoot>
                 <tr>
                     <td>Media Final</td>
-                    <td>9</td>
-                    <td><span class="resultado aprovado">Aprovado</span></td>
+                    <td id="media">---</td>
+                    <td><span class="resultado aprovado"></span></td>
                 </tr>
             </tfoot>
         </table>
