@@ -4,38 +4,47 @@ let avisoNota   = document.getElementById("notaErro")
 let atividade   = document.getElementById("atividade")
 let tabela      = document.getElementById("tabelado")
 let numeros     = []
+let tarefas     = []
 let soma        = 0
 
 function validar(){
-    let nota        = document.getElementById("nota").value
-    
-    Linhas()
-    numeros.push(nota)
-    soma = 0
-    for(let i = 0; i < numeros.length ; i++ ){
-        soma += Number(numeros[i])
-    }
+        let atividade   = document.getElementById("atividade").value
+        let nota        = document.getElementById("nota").value
+        
+        if(!tarefas.includes(atividade)){
+        Linhas()
+        numeros.push(nota)
+        soma = 0
 
-    let media                                   = soma / numeros.length
-    document.getElementById("media").innerHTML  =`${media}`
+        tarefas.push(atividade)
 
-    let situacao                                = document.getElementsByClassName("resultado")[0]
-    if(media >= 7){
-        situacao.innerHTML  = "Aprovado"
-        situacao.setAttribute("class","resultado aprovado")
-        situacao.style.display = "block"
+        for(let i = 0; i < numeros.length ; i++ ){
+            soma += Number(numeros[i])
+        }
+
+        let media                                   = soma / numeros.length
+        document.getElementById("media").innerHTML  =`${media}`
+
+        let situacao                                = document.getElementsByClassName("resultado")[0]
+        if(media >= 7){
+            situacao.innerHTML  = "Aprovado"
+            situacao.setAttribute("class","resultado aprovado")
+            situacao.style.display = "block"
+        }else{
+            situacao.innerHTML  = "Reprovado"
+            situacao.setAttribute("class","resultado reprovado")
+            situacao.style.display = "block"
+        }
     }else{
-        situacao.innerHTML  = "Reprovado"
-        situacao.setAttribute("class","resultado reprovado")
-        situacao.style.display = "block"
+        avisoNome.style.display         = "flex"
+        avisoNome.style.backgroundColor = "red"
+        avisoNome.innerHTML             = "Tarefa já aditada"
     }
-    nota = ""
 }
 function Linhas(){
     let atividade   = document.getElementById("atividade").value
     let nota        = document.getElementById("nota").value
     
-
     if(atividade == ""){
         avisoNome.style.display         = "flex"
         avisoNome.style.backgroundColor = "red"
