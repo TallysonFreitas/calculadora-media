@@ -6,6 +6,7 @@ let tabela      = document.getElementById("tabelado")
 let numeros     = []
 let tarefas     = []
 let soma        = 0
+let notaMinima = Number(prompt("Media minima"))
 
 function validar(){
         let atividade   = document.getElementById("atividade").value
@@ -23,10 +24,10 @@ function validar(){
         }
 
         let media                                   = soma / numeros.length
-        document.getElementById("media").innerHTML  =`${media}`
+        document.getElementById("media").innerHTML  =`${media.toFixed(2)}`
 
         let situacao                                = document.getElementsByClassName("resultado")[0]
-        if(media >= 7){
+        if(media >= notaMinima){
             situacao.innerHTML  = "Aprovado"
             situacao.setAttribute("class","resultado aprovado")
             situacao.style.display = "block"
@@ -63,7 +64,7 @@ function Linhas(){
         linha               += `<td>${atividade}</td>`
         linha               += `<td>${nota}</td>`
 
-        if(nota >= 7){
+        if(nota >= notaMinima){
             linha           += `<td><img src="images/aprovado.png" alt="emoji"></td>`
 
         }else{
